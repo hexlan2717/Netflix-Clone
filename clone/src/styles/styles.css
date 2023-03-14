@@ -276,20 +276,22 @@ body {
   color: white;
 }
 
-.FAQ__visible {
+.accordion-content {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
   background-color: #303030;
   border-top: 1px solid black;
+}
+
+.accordion-content[aria-expanded="true"] {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 1.8s cubic-bezier(0, 1, 0, 1);
 }
 
-.FAQ__visible > p {
+.accordion-content > p {
   margin: 1rem;
-}
-
-.FAQ__visible_ver2 {
-  background-color: #dc030f;
 }
 
 .FAQ__list__container {
